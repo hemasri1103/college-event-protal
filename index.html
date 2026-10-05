@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusFest 2026 | College Event Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Campus<span>Fest</span>
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-small">WELCOME TO</p>
+
+                <h1>
+                    CAMPUSFEST
+                    <span>2026</span>
+                </h1>
+
+                <p>
+                    The biggest college celebration of creativity,
+                    technology, culture and talent.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#events" class="btn primary-btn">
+                        Explore Events
+                    </a>
+
+                    <a href="#register" class="btn secondary-btn">
+                        Register Now
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ANNOUNCEMENT ================= -->
+
+        <section class="announcement">
+
+            <div class="announcement-title">
+                📢 Latest Announcement
+            </div>
+
+            <p id="announcementText">
+                Registration is now open! Don't miss your favourite events.
+            </p>
+
+            <button onclick="changeAnnouncement()">
+                View Update
+            </button>
+
+        </section>
+
+
+        <!-- ================= EVENTS ================= -->
+
+        <section id="events" class="section">
+
+            <div class="section-heading">
+
+                <p>WHAT'S HAPPENING</p>
+
+                <h2>Featured Events</h2>
+
+                <span>
+                    Explore exciting events happening at CampusFest 2026.
+                </span>
+
+            </div>
+
+
+            <!-- Event Filters -->
+
+            <div class="filters">
+
+                <button
+                    class="filter-btn active"
+                    onclick="filterEvents('all')">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterEvents('technical')">
+                    Technical
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterEvents('cultural')">
+                    Cultural
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterEvents('sports')">
+                    Sports
+                </button>
+
+            </div>
+
+
+            <!-- Event Cards -->
+
+            <div class="event-grid">
+
+
+                <article class="event-card" data-category="technical">
+
+                    <div class="event-icon">
+                        💻
+                    </div>
+
+                    <div class="event-content">
+
+                        <span class="event-category">
+                            Technical
+                        </span>
+
+                        <h3>Code Clash</h3>
+
+                        <p>
+                            Test your programming skills and solve
+                            challenging coding problems.
+                        </p>
+
+                        <div class="event-info">
+                            📅 10 October 2026
+                        </div>
+
+                        <div class="event-info">
+                            ⏰ 10:00 AM
+                        </div>
+
+                        <div class="event-info">
+                            📍 Computer Lab
+                        </div>
+
+                        <button
+                            class="small-btn"
+                            onclick="selectEvent('Code Clash')">
+                            Register
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card" data-category="technical">
+
+                    <div class="event-icon">
+                        🤖
+                    </div>
+
+                    <div class="event-content">
+
+                        <span class="event-category">
+                            Technical
+                        </span>
+
+                        <h3>Robo Wars</h3>
+
+                        <p>
+                            Watch teams compete with innovative
+                            robots and engineering ideas.
+                        </p>
+
+                        <div class="event-info">
+                            📅 10 October 2026
+                        </div>
+
+                        <div class="event-info">
+                            ⏰ 2:00 PM
+                        </div>
+
+                        <div class="event-info">
+                            📍 Innovation Hall
+                        </div>
+
+                        <button
+                            class="small-btn"
+                            onclick="selectEvent('Robo Wars')">
+                            Register
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card" data-category="cultural">
+
+                    <div class="event-icon">
+                        🎤
+                    </div>
+
+                    <div class="event-content">
+
+                        <span class="event-category">
+                            Cultural
+                        </span>
+
+                        <h3>Battle of Bands</h3>
+
+                        <p>
+                            Experience an exciting musical battle
+                            between talented college bands.
+                        </p>
+
+                        <div class="event-info">
+                            📅 11 October 2026
+                        </div>
+
+                        <div class="event-info">
+                            ⏰ 5:00 PM
+                        </div>
+
+                        <div class="event-info">
+                            📍 Main Auditorium
+                        </div>
+
+                        <button
+                            class="small-btn"
+                            onclick="selectEvent('Battle of Bands')">
+                            Register
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card" data-category="cultural">
+
+                    <div class="event-icon">
+                        💃
+                    </div>
+
+                    <div class="event-content">
+
+                        <span class="event-category">
+                            Cultural
+                        </span>
+
+                        <h3>Dance Fiesta</h3>
+
+                        <p>
+                            Celebrate different cultures through
+                            energetic dance performances.
+                        </p>
+
+                        <div class="event-info">
+                            📅 11 October 2026
+                        </div>
+
+                        <div class="event-info">
+                            ⏰ 6:30 PM
+                        </div>
+
+                        <div class="event-info">
+                            📍 Open Stage
+                        </div>
+
+                        <button
+                            class="small-btn"
+                            onclick="selectEvent('Dance Fiesta')">
+                            Register
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card" data-category="sports">
+
+                    <div class="event-icon">
+                        🏏
+                    </div>
+
+                    <div class="event-content">
+
+                        <span class="event-category">
+                            Sports
+                        </span>
+
+                        <h3>Cricket Cup</h3>
+
+                        <p>
+                            Compete with college teams and fight
+                            for the CampusFest trophy.
+                        </p>
+
+                        <div class="event-info">
+                            📅 12 October 2026
+                        </div>
+
+                        <div class="event-info">
+                            ⏰ 9:00 AM
+                        </div>
+
+                        <div class="event-info">
+                            📍 College Ground
+                        </div>
+
+                        <button
+                            class="small-btn"
+                            onclick="selectEvent('Cricket Cup')">
+                            Register
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card" data-category="sports">
+
+                    <div class="event-icon">
+                        🏃
+                    </div>
+
+                    <div class="event-content">
+
+                        <span class="event-category">
+                            Sports
+                        </span>
+
+                        <h3>Marathon</h3>
+
+                        <p>
+                            Take part in an exciting campus running
+                            challenge.
+                        </p>
+
+                        <div class="event-info">
+                            📅 12 October 2026
+                        </div>
+
+                        <div class="event-info">
+                            ⏰ 7:00 AM
+                        </div>
+
+                        <div class="event-info">
+                            📍 College Ground
+                        </div>
+
+                        <button
+                            class="small-btn"
+                            onclick="selectEvent('Marathon')">
+                            Register
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SCHEDULE ================= -->
+
+        <section id="schedule" class="section schedule-section">
+
+            <div class="section-heading">
+
+                <p>EVENT TIMELINE</p>
+
+                <h2>Festival Schedule</h2>
+
+                <span>
+                    Plan your day and never miss an event.
+                </span>
+
+            </div>
+
+
+            <div class="schedule-table-wrapper">
+
+                <table class="schedule-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Event</th>
+                            <th>Venue</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>10 Oct</td>
+                            <td>10:00 AM</td>
+                            <td>Code Clash</td>
+                            <td>Computer Lab</td>
+                        </tr>
+
+                        <tr>
+                            <td>10 Oct</td>
+                            <td>2:00 PM</td>
+                            <td>Robo Wars</td>
+                            <td>Innovation Hall</td>
+                        </tr>
+
+                        <tr>
+                            <td>11 Oct</td>
+                            <td>5:00 PM</td>
+                            <td>Battle of Bands</td>
+                            <td>Main Auditorium</td>
+                        </tr>
+
+                        <tr>
+                            <td>11 Oct</td>
+                            <td>6:30 PM</td>
+                            <td>Dance Fiesta</td>
+                            <td>Open Stage</td>
+                        </tr>
+
+                        <tr>
+                            <td>12 Oct</td>
+                            <td>9:00 AM</td>
+                            <td>Cricket Cup</td>
+                            <td>College Ground</td>
+                        </tr>
+
+                        <tr>
+                            <td>12 Oct</td>
+                            <td>7:00 AM</td>
+                            <td>Marathon</td>
+                            <td>College Ground</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY ================= -->
+
+        <section id="gallery" class="section">
+
+            <div class="section-heading">
+
+                <p>MEMORIES</p>
+
+                <h2>Event Gallery</h2>
+
+                <span>
+                    A glimpse of the CampusFest experience.
+                </span>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+                    alt="College event">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+                    alt="College celebration">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+                    alt="Festival crowd">
+
+                <img
+                    src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80"
+                    alt="Concert event">
+
+                <img
+                    src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80"
+                    alt="College gathering">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+                    alt="College students">
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REGISTRATION ================= -->
+
+        <section id="register" class="section register-section">
+
+            <div class="section-heading">
+
+                <p>JOIN THE FESTIVAL</p>
+
+                <h2>Event Registration</h2>
+
+                <span>
+                    Register for your favourite CampusFest event.
+                </span>
+
+            </div>
+
+
+            <div class="registration-container">
+
+                <form id="registrationForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="registerNo">
+                                Register Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registerNo"
+                                placeholder="Enter register number"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="department">
+                                Department
+                            </label>
+
+                            <select id="department" required>
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="Computer Science">
+                                    Computer Science
+                                </option>
+
+                                <option value="Information Technology">
+                                    Information Technology
+                                </option>
+
+                                <option value="Electronics">
+                                    Electronics
+                                </option>
+
+                                <option value="Mechanical">
+                                    Mechanical
+                                </option>
+
+                                <option value="Commerce">
+                                    Commerce
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="eventSelect">
+                            Select Event
+                        </label>
+
+                        <select id="eventSelect" required>
+
+                            <option value="">
+                                Select an event
+                            </option>
+
+                            <option value="Code Clash">
+                                Code Clash
+                            </option>
+
+                            <option value="Robo Wars">
+                                Robo Wars
+                            </option>
+
+                            <option value="Battle of Bands">
+                                Battle of Bands
+                            </option>
+
+                            <option value="Dance Fiesta">
+                                Dance Fiesta
+                            </option>
+
+                            <option value="Cricket Cup">
+                                Cricket Cup
+                            </option>
+
+                            <option value="Marathon">
+                                Marathon
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message / Comments
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="4"
+                            placeholder="Any message..."></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn register-submit">
+
+                        Submit Registration
+
+                    </button>
+
+
+                    <div
+                        id="successMessage"
+                        class="success-message">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="section-heading">
+
+                <p>GET IN TOUCH</p>
+
+                <h2>Contact Us</h2>
+
+                <span>
+                    Have questions? We are here to help.
+                </span>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <h3>Location</h3>
+
+                    <p>
+                        Main College Campus,<br>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📧
+                    </div>
+
+                    <h3>Email</h3>
+
+                    <p>
+                        campusfest@college.edu
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <h3>Phone</h3>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <h3>Send us a message</h3>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Your Name">
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Your Email">
+
+                <textarea
+                    id="contactMessage"
+                    rows="4"
+                    placeholder="Your Message"></textarea>
+
+                <button
+                    class="btn primary-btn"
+                    onclick="sendMessage()">
+
+                    Send Message
+
+                </button>
+
+                <p id="contactResponse"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>CampusFest 2026</h2>
+
+                <p>
+                    Celebrating creativity, technology,
+                    culture and talent.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#events">Events</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#register">Register</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 CampusFest. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
